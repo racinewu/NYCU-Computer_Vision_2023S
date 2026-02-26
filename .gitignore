@@ -1,0 +1,11 @@
+Slides/
+Book/
+/*.pdf
+*.docx
+*.pptx
+*.mp4
+Homework/**/*.png
+Homework/**/*.pdf
+Homework/**/*.zip
+Homework/HW2/baseline/li*
+Homework/HW2/baseline/no*
