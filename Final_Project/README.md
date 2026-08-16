@@ -182,7 +182,7 @@ python3 validate.py <point_cloud>.ply
       <br><sub>Figure 2a. FPFH Coarse</sub>
     </td>
     <td align="center">
-      <img src="./images/fpfg_fine.png" width="400"/>
+      <img src="./images/fpfh_fine.png" width="400"/>
       <br><sub>Figure 2b. FPFH Fine</sub>
     </td>
   </tr>
