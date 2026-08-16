@@ -65,6 +65,7 @@ HW1/
   │       ├── mask.png          # Valid pixel mask
   │       ├── depth_map.png     # Reconstructed depth information
   │       └── <object_name>.ply # 3D point cloud file
+  ├── HW1.pptx
   └── README.md
 ```
 ## Usage Guide
@@ -81,7 +82,7 @@ python photometric_stereo.py bunny star venus
 
 ## Experiment
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="testcase/bunny/normal_map.png" width="300"/>
@@ -98,7 +99,7 @@ python photometric_stereo.py bunny star venus
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="testcase/star/normal_map.png" width="300"/>
@@ -115,7 +116,7 @@ python photometric_stereo.py bunny star venus
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="testcase/venus/normal_map.png" width="300"/>
