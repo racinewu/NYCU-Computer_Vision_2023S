@@ -117,9 +117,12 @@ The quaternion component order and the transform direction each follow more than
 - Summary Table: Prints the success rate, fitness and RRE of both implementations to the terminal, over successful runs.
 
 ## Environment
-- OS: Windows 11
-- Interpreter: Python 3.10.11
-- Required packages: open3d, scipy, mealpy
+- OS: Windows 11 & Ubuntu 22.04
+- Interpreter: Python 3.10.11 & 3.10.12
+- Required packages: open3d(0.19.0), scipy(1.15.3), mealpy(3.0.3)
+
+> [!NOTE]
+> The metaheuristics reproduce exactly on both Windows 11 and Ubuntu 22.04. The RANSAC-based methods do not: Open3D samples via C++ `uniform_int_distribution`, whose output is implementation-defined and differs between libstdc++ and MSVC STL, so the two platforms draw different correspondence samples and the Ubuntu results on this dataset were noticeably worse.
 
 ## Directory Structure
 ```
