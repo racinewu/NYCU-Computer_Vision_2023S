@@ -72,17 +72,21 @@ Given two point clouds of the same object captured from different viewpoints, th
 - **Success criterion**: coarse RRE below 5 degrees
 
 ## Input / Output Format
-### main.py
-**Input**
-Two pointcloud files of the same object from different viewpoints, for example `bun000.ply` and `bun045.ply` from the Stanford Bunny dataset. An overlap of roughly 50 to 80 percent is recommended.
+### Input
+**Point Cloud Files**: The input should consist of `.ply` files of the same object, with sufficient geometric detail for feature description.
 
-An optional Stanford `.conf` file gives the pose of each scan and is used only to report RRE and RTE. Each bmesh line contains a filename, a translation and a quaternion.
+- `main.py`: Two files captured from different viewpoints, for example `bun000.ply` and `bun045.ply` from the Stanford Bunny dataset. For optimal results, it is recommended that the scans have approximately 50-80% overlap.
+- `experiment.py`: A single file, which is rotated by a known amount to build the target. The density ablation additionally reads a lower resolution version beside the input, for example `bun_zipper_res4.ply` next to `bun_zipper.ply`.
+- `validate.py`: A single file, which is rotated by a known amount to build the target.
+
+**Reference Pose File**: An optional Stanford `.conf` file used by `main.py`, giving the pose of each scan so that RRE and RTE can be reported. Each bmesh line contains a filename, a translation and a quaternion.
 
 ```
 bmesh <filename> <tx> <ty> <tz> <q0> <q1> <q2> <q3>
 ```
 
 **Example**
+
 ```
 camera 0 0 0 0 0 0 1
 bmesh bun000.ply 0 0 0 0 0 0 1
@@ -91,34 +95,26 @@ bmesh bun045.ply -0.01446 0.00050 -0.01634 0.00050 0.38249 0.00093 0.92395
 
 The quaternion component order and the transform direction each follow more than one convention, so all eight combinations are tested against the actual points and the best-fitting one is reported.
 
-**Output**
+### Output
+**main.py**
 - Initial Pose: Both clouds shown in their own coordinates, confirming the viewpoint difference. Also saved as `stitch/before.ply`.
 - Per-Run Log: Prints coarse chamfer, coarse RRE, evaluation count, fine chamfer, ICP fitness and fine RRE for every method and seed to the terminal.
 - Coarse Result: Overlay after coarse registration for the median run of each method. Also saved as `stitch/coarse_<method>.ply`.
 - Fine Result: Overlay after fine registration for the median run of each method. Also saved as `stitch/fine_<method>.ply`.
-- Summary Table: Prints the mean and standard deviation per method, grouped into coarse and fine stages, with the success rate over the repeated runs.
+- Summary Table: Prints the mean and standard deviation per method to the terminal, grouped into coarse and fine stages, with the success rate over the repeated runs.
 - Transformation Matrix: Prints the estimated 4x4 matrix of the best method to the terminal.
 
-
-### experiment.py
-**Input**
-One pointcloud file, which is rotated by a known amount to build the target. With the density ablation a lower resolution file beside the input is used instead, for example `bun_zipper_res4.ply` next to `bun_zipper.ply`.
-
-**Output**
-- Cloud Sizes: Prints the point counts actually fed to each stage, so an ablation can be confirmed.
-- Per-Run Log: Prints coarse RRE, fine RRE, fine RTE, the success flag and the elapsed time for every angle, method and seed.
+**experiment.py**
+- Cloud Sizes: Prints the point counts actually fed to each stage to the terminal, so an ablation can be confirmed.
+- Per-Run Log: Prints coarse RRE, fine RRE, fine RTE, the success flag and the elapsed time for every angle, method and seed to the terminal.
 - Coarse and Fine Results: Overlay of the median run of each method at each angle.
-- Per-Angle Table: Prints the mean and standard deviation over successful runs, with the success rate and the evaluation count.
+- Per-Angle Table: Prints the mean and standard deviation over successful runs to the terminal, with the success rate and the evaluation count.
 
-### validate.py
-**Input**
-One pointcloud file, which is rotated by a known amount to build the target.
-
-**Output**
+**validate.py**
 - Initial Pose: The problem the optimizers face, shown for seed zero.
 - Per-Run Log: Prints the fitness, the RRE and the evaluation count of both implementations side by side for every seed.
 - Median Results: Overlay of the median run of the hand-written implementation and of the mealpy one.
-- Summary Table: Prints the success rate, fitness and RRE of both implementations, over successful runs.
+- Summary Table: Prints the success rate, fitness and RRE of both implementations to the terminal, over successful runs.
 
 ## Environment
 - OS: Windows 11
