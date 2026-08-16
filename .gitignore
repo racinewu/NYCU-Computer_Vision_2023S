@@ -9,3 +9,9 @@ Homework/**/*.pdf
 Homework/**/*.zip
 Homework/HW2/baseline/li*
 Homework/HW2/baseline/no*
+Final_Project/paper/
+Final_Project/Group*
+Final_Project/*Final project.pdf
+Final_Project/bunny*
+Final_Project/stitch
+__pycache__
