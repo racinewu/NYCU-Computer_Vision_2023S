@@ -27,5 +27,5 @@ Lecturer: 林奕成 I-Chen Lin
 - PA1 Photometric Stereo [README](Homework/HW1)
 - PA2 Image Stitching [README](Homework/HW2)
 
-## Final Porject
+## Final Project
 Point Cloud Registration [README](Final_Project)
