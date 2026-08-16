@@ -63,6 +63,7 @@ HW2/
   │   └── m1~m4.jpg       # Bonus input image
   ├── feature_matches.jpg # Feature matching visualization
   ├── output.jpg          # Output panorama image
+  ├── HW2.pptx
   └── README.md
 ```
 
