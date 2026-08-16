@@ -175,7 +175,7 @@ python3 validate.py <point_cloud>.ply
 </p>
 <p align="center">Figure 1. Statistics Table</p>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="./images/fpfh_coarse.png" width="400"/>
@@ -188,7 +188,7 @@ python3 validate.py <point_cloud>.ply
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="./images/rangwo_coarse.png" width="400"/>
@@ -201,7 +201,7 @@ python3 validate.py <point_cloud>.ply
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="./images/ranwoa_coarse.png" width="400"/>
@@ -214,7 +214,7 @@ python3 validate.py <point_cloud>.ply
   </tr>
 </table>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <img src="./images/raniwoa_coarse.png" width="400"/>

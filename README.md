@@ -24,8 +24,8 @@ Lecturer: 林奕成 I-Chen Lin
 - Selected Topics
 
 ## Programming Assignment
-- PA1 Photometric Stereo [README](/Homework/HW1/README.md)
-- PA2 Image Stitching [README](/Homework/HW2/README.md)
+- PA1 Photometric Stereo [README](Homework/HW1)
+- PA2 Image Stitching [README](Homework/HW2)
 
 ## Final Porject
-Point Cloud Registration
+Point Cloud Registration [README](Final_Project)
