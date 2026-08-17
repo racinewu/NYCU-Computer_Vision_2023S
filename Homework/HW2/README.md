@@ -49,9 +49,9 @@ Given two input images with overlapping regions, the goal is to generate a seaml
 - Final Stitching Result: Final panorama with specified blending mode applied. Also saved as `output.jpg`.
 
 ## Environment
-- OS: Windows 11
-- Interpreter: Python 3.10.11
-- Required packages: OpenCV, NumPy, Matplotlib, Random
+- OS: Windows 11 & Ubuntu 22.04
+- Interpreter: Python 3.10.11 & 3.10.12
+- Required packages: OpenCV, NumPy, Matplotlib, Random, tabulate
 
 ## Directory Structure
 ```
