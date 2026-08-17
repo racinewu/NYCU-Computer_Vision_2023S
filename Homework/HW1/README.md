@@ -49,8 +49,8 @@ pic6: (-22,295,2230)
 - Point Cloud: ASCII format point cloud file with interactive visualization. Also saved as `object_name.ply`.
 
 ## Environment:
-- OS: Windows 11
-- Interpreter: Python 3.10.11
+- OS: Windows 11 & Ubuntu 22.04
+- Interpreter: Python 3.10.11 & 3.10.12
 - Required packages: OpenCV, NumPy, Open3D, Matplotlib, SciPy
 
 ## Directory Structure
